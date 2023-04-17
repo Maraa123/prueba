@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script language="javascript">
+        var contador = [0, 0, 0]; // Define the contador array
+        var maxi = 2; // Define the maximum number of checkboxes that can be checked in each group
+        function validar(check, grupo) {
+           if (check.checked==true){
+               contador[grupo]++;
+               if (contador[grupo]>maxi) {
+                  check.checked=false; 
+                  contador[grupo]--;
+               }
+           } else {    
+               contador[grupo]--;
+           }
+        }
+    </script>
+</head>
+<body>
+    <form name="formulario" id="formulario">
+
+                <input type='checkbox' onclick='validar(formulario.checkbox1,0)' name='checkbox1' value='checkbox1'> <!-- Remove the closing </td> tags -->
+                <input type='checkbox' onclick='validar(formulario.checkbox2,0)' name='checkbox2' value='checkbox2'>
+               <input type='checkbox' onclick='validar(formulario.checkbox3,0)' name='checkbox3' value='checkbox3'>
+    </form>
+</body>
+</html>
+<div id="sabores"class="form-check mb-4 text-start">
+    <div id="cremas" class="">
+        <h6 class="m-1">CREMAS</h6>
+        <div>
+        <input class="form-check-input" type="checkbox" value="" id="AMERICANA" onclick='validar(form.checkbox0,0)' name='checkbox0' >
+        <label class="form-check-label" for="AMERICANA">AMERICANA</label>
+        </div>
+            <div>
+            <input class="form-check-input" type="checkbox" value="" id="BANANA SPLIT" onclick='validar(form.checkbox1,0)' name='checkbox1' >
+            <label class="form-check-label" for="BANANA SPLIT">BANANA SPLIT</label>
+            </div>
+        <div>
+        <input class="form-check-input" type="checkbox" value="" id="TIRAMISU" onclick='validar(form.checkbox2,0)' name='checkbox2' >
+        <label class="form-check-label" for="TIRAMISU">TIRAMISÚ</label>
+        </div>
+            <div>
+            <input class="form-check-input" type="checkbox" value="" id="COCO" onclick='validar(form.checkbox3,0)' name='checkbox3' >
+            <label class="form-check-label" for="COCO">COCO CON DULCE DE LECHE</label>
+            </div>
+        <div>
+        <input class="form-check-input" type="checkbox" value="" id="CHOCOTORTA" onclick='validar(form.checkbox4,0)' name='checkbox4' >
+        <label class="form-check-label" for="CHOCOTORTA">CHOCOTORTA</label>
+        </div>
+            <div>
+            <input class="form-check-input" type="checkbox" value="" id="MASCARPONE" onclick='validar(form.checkbox5,0)' name='checkbox5' >
+            <label class="form-check-label" for="MASCARPONE">MASCARPONE</label>
+            </div>
+        <div>
+        <input class="form-check-input" type="checkbox" value="" id="SAMBAYON" onclick='validar(form.checkbox6,0)' name='checkbox6' >
+        <label class="form-check-label" for="SAMBAYON">SAMBAYÓN</label>
+        </div>
+            <div>
+            <input class="form-check-input" type="checkbox" value="" id="TRAMONTANA"onclick='validar(form.checkbox7,0)' name='checkbox7' >
+            <label class="form-check-label" for="TRAMONTANA">TRAMONTANA</label>
+            </div>
+    </div>
+    <div id="chocolates" class="text-start">
+
+        <h6 class="m-1">CHOLATES</h6>
+        <div>
+        <input class="form-check-input" type="checkbox" value="" id="CLASICO1" onclick='validar(form.checkbox8,0)' name='checkbox8' >
+        <label class="form-check-label" for="CLASICO1">CLÁSICO</label>
+        </div>
+            <div>
+            <input class="form-check-input" type="checkbox" value="" id="BLANCOPATAGONICO" onclick='validar(form.checkbox9,0)' name='checkbox9' >
+            <label class="form-check-label" for="BLANCOPATAGONICO">BLANCO PATAGÓNICO</label>
+            </div>
+        <div>
+        <input class="form-check-input" type="checkbox" value="" id="EXTRACACAO" onclick='validar(form.checkbox10,0)' name='checkbox10' >
+        <label class="form-check-label" for="EXTRACACAO">INTENSO EXTRA CACAO</label>
+        </div>
+            <div>
+            <input class="form-check-input" type="checkbox" value="" id="DOBLETENTACION"onclick='validar(form.checkbox11,0)' name='checkbox11' >
+            <label class="form-check-label" for="DOBLETENTACION">DOBLE TENTACIÓN</label>
+            </div>
+    </div>
+
+    <div id="dulcedeleche" class="text-start">
+        <h6 class="m-1">DULCE DE LECHE</h6>
+        <div>
+        <input class="form-check-input" type="checkbox" value="" id="CLASICO2" onclick='validar(form.checkbox12,0)' name='checkbox12' >
+        <label class="form-check-label" for="CLASICO2">CLÁSICO</label>
+        </div>
+            <div>
+            <input class="form-check-input" type="checkbox" value="" id="DULCEDELECHEGRANIZADO"onclick='validar(form.checkbox13,0)' name='checkbox13' >
+            <label class="form-check-label" for="DULCEDELECHEGRANIZADO">DULCE DE LECHE GRANIZADO</label>
+            </div>
+        <div>
+        <input class="form-check-input" type="checkbox" value="" id="MINIOREO" onclick='validar(form.checkbox14,0)' name='checkbox14' >
+        <label class="form-check-label" for="MINIOREO">MINI OREO</label>
+        </div>
+            <div>
+            <input class="form-check-input" type="checkbox" value="" id="TENTACION" onclick='validar(form.checkbox14,0)' name='checkbox15' >
+            <label class="form-check-label" for="TENTACION">TENTACIÓN</label>
+            </div> 
+    </div>
+
+    <div id="frutales" class="text-start">
+        <div>
+            <h6 class="m-1">FRUTALES</h6>
+        <input class="form-check-input" type="checkbox" value="FRUTILLACREMA" id="FRUTILLACREMA"onclick='validar(form.checkbox16,0)' name='checkbox16' >
+        <label class="form-check-label" for="FRUTILLACREMA">FRUTILLA A LA CREMA</label>
+        </div>
+            <div>
+            <input class="form-check-input" type="checkbox" value="" id="FRUTILLANATURAL" onclick='validar(form.checkbox17,0)' name='checkbox17' >
+            <label class="form-check-label" for="FRUTILLANATURAL">FRUTILLA AL NATURAL</label>
+            </div>  
+        <div>
+        <input class="form-check-input" type="checkbox" value="" id="LIMON" onclick='validar(form.checkbox18,0)' name='checkbox18' >
+        <label class="form-check-label" for="LIMON">LIMON</label>
+        </div>
+            <div>
+            <input class="form-check-input" type="checkbox" value="" id="MOUSSEMARACUYA" onclick='validar(form.checkbox19,0)' name='checkbox19' >
+            <label class="form-check-label" for="MOUSSEMARACUYA">MOUSSE DE MARACUYÁ</label>
+            </div>
+        <div>
+        <input class="form-check-input" type="checkbox" value="ANANA" id="ANANA" onclick='validar(form.checkbox20,0)' name='checkbox20' >
+        <label class="form-check-label" for="ANANA">ANANÁ</label>
+        </div>
+    </div>
+</div>
